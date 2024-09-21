@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Aluno</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+            font-family: sans-serif;
+        }
+
+    body{
+        background-image: url(img/taluno001.jpg);
+        background-color:dodgerblue;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    .form{
+        background: #d1d0d0;
+        width: 50%;
+        height: 70%;
+        margin: auto;
+        text-align: center;
+        border: 4px solid rgb(2, 77, 115);
+        border-radius: 10px;
+        margin-top: 60px;
+    }
+    h1{
+        background: rgb(2, 77, 115);
+    }
+    input,select{
+        border-radius: 5px;
+        height: 15px;
+        border: none;
+    }
+    input[type="submit"]{
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        width: 80px;
+        height: 35px;
+    }  
+    input[ type="submit"]:hover{
+        background: #069;
+        color: #fff;
+    }    }   
+
+    .table{
+        width: 50%;
+        height: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        place-items: center;       
+    }
+    tr{
+        font-size: 15px;
+        height: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #000;
+        color: #fff;
+        text-align: center;
+    }
+    td{
+        width: 110px;
+        background: #fff;
+        color:#000;
+        border: 2px solid #000
+    }
+   
+    </style>
+<body>
+    <div class="form">
+        <form method="post" action="index.php">
+            <h1>Sistema de Cadastro</h1><br>
+            <h2>Dados do Aluno</h2>
+            <label for="nome"><strong>Nome:</strong></label>
+            <input type="text" size="25" placeholder="Nome do Aluno Completo" required>
+            <label for="cpf"><strong>CPF:</strong></label>
+            <input type="text" size="25" placeholder="000.000.000-00" required><br>  
+            <label for="nome"><strong>Idade:</strong></label>
+            <input type="text" size="10" placeholder="Idade do Aluno" required>
+            <label for="nome"><strong>Turma:</strong></label>
+            <input type="text" size="25" placeholder="Turma e Turno" required><br>
+            <label for="sexo"><strong>Sexo:</strong></label> &nbsp;
+            <label for="masc">Masculino</label>            
+            <input type="radio" name="opcao" id="op1">
+            <label for="fem">Feminino</label>            
+            <input type="radio" name="opcao" id="op1">
+            <label for="out">Outros</label>            
+            <input type="radio" name="opcao" id="op1"><br>
+            <label for="curso"><strong>Curso:</strong></label>
+            <select name="curso" id="curso">
+                <option value="0">Selecione seu Curso</option>
+                <option value="1">HTML/CSS</option>
+                <option value="2">JAVA</option>
+                <option value="3">Python</option>
+                <option value="4">C#</option>
+                <option value="5">JavaScript</option>   
+            </select><br>        
+            <label for="email"><strong>E-mail:</strong></label>
+            <input type="email" id="email" name="email" placeholder="nome@gmail.com" required><br><br>
+            <input type="submit" value="Finalizar"><br><br>
+            <h2>Alunos Cadastrados</h2><br>
+                <div class="table"></div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>MATRÍCULA</th>
+                            <th>CPF</th>
+                            <th>IDADE</th>
+                            <th>TURMA</th>
+                            <th>CURSO</th>
+                            <th>SEXO</th>
+                            <th>E-MAIL</th>
+                        </tr>
+                         <td>20200228</td>
+                         <td>608.856.001-06</td>
+                         <td>19 anos</td>
+                         <td>01T</td>
+                         <td>HTML/CSS</td>
+                         <td>Masculino</td> 
+                         <td>mikefilipe001@gmail.com</td>                       
+                        </tr>
+                        <tr>
+                            <td>20200430</td>
+                            <td>801.008.080-10</td>
+                            <td>18 anos</td>
+                            <td>02T</td>
+                            <td>Python</td>
+                            <td>Feminino</td> 
+                            <td>lanabia2000@gmail.com</td>                       
+                         </tr>
+                        <tr>
+                            <td>202000630</td>
+                            <td>900.891.091-12</td>
+                            <td>19 anos</td>
+                            <td>03T</td>
+                            <td>Java</td>
+                            <td>Masculino</td> 
+                            <td>luckpro@gmail.com</td>                     
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+          
+        </form>
+    </div>
+    
+</body>
+</html>
